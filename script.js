@@ -22,6 +22,11 @@ const tag3 = document.getElementById('tag3');
 const tag4 = document.getElementById('tag4');
 const sideNewsContainer = document.getElementById('side-container');
 const sideNewsTemplate = document.getElementById('template-card')
+const breakingNews = document.getElementById('breaking-news')
+const dedNewsType = document.querySelector('.news-type');
+const dedNewsHeadline = document.querySelector('.news-headline');
+const dedNewsContent= document.querySelector('.news-content');
+const dedNewsDate = document.querySelector('.news-date');
 
 async function fetchData(){
     try{
@@ -32,6 +37,8 @@ async function fetchData(){
         }
 
         const data = await response.json();
+
+        breakingNews.innerHTML = `${data[0].headline}`;
 
         news1.style.backgroundImage = `url(${data[0].image})`;
         tagline1.innerHTML = `${data[0].headline}`;
@@ -79,3 +86,6 @@ function sideDataFill(cardClone, sideNewsData) {
     sideNewsHeadline.innerHTML = sideNewsData.headline;
     sideNewsDate.innerHTML = sideNewsData.date;
 }
+
+
+
