@@ -1,5 +1,11 @@
 fetchData();
 
+const logo= document.querySelector(".logo");
+
+logo.addEventListener("click", ()=>{
+    location.reload();
+})
+
 const news1 = document.querySelector('.news1');
 const news2 = document.querySelector('.news2');
 const news3 = document.querySelector('.news3');
@@ -21,8 +27,8 @@ const tag2 = document.getElementById('tag2');
 const tag3 = document.getElementById('tag3');
 const tag4 = document.getElementById('tag4');
 const sideNewsContainer = document.getElementById('side-container');
-const sideNewsTemplate = document.getElementById('template-card')
-const breakingNews = document.getElementById('breaking-news')
+const sideNewsTemplate = document.getElementById('template-card');
+const breakingNews = document.getElementById('breaking-news');
 const dedNewsType = document.querySelector('.news-type');
 const dedNewsHeadline = document.querySelector('.news-headline');
 const dedNewsContent= document.querySelector('.news-content');
